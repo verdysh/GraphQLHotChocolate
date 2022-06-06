@@ -1,19 +1,20 @@
-﻿using Data.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GraphQL.Devices
+namespace GraphQL.Tenants
 {
-    public class DeviceType : ObjectType<DevicePayload>
+    public class TenantType : ObjectType<TenantPayload>
     {
-        protected override void Configure(IObjectTypeDescriptor<DevicePayload> descriptor)
+        protected override void Configure(IObjectTypeDescriptor<TenantPayload> descriptor)
         {
             //descriptor.Field(d => d.Name).Ignore();
 
             base.Configure(descriptor);
         }
     }
+
+
 }

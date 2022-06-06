@@ -1,5 +1,7 @@
 using Data;
+using GraphQL;
 using GraphQL.Devices;
+using GraphQL.Tenants;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
@@ -19,8 +21,10 @@ builder.Services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 builder.Services
     .AddGraphQLServer()
     //.AddAuthorization()
-    .AddQueryType<DeviceQuery>()
+
+    .AddQueryType<Query>()
     .AddType<DeviceType>()
+    
     .AddFiltering()
     .AddSorting()
 ;

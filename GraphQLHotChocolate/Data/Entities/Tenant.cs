@@ -11,5 +11,7 @@ namespace Data.Entities
     {
         public Guid Id { get; set; }
         [MaxLength(200)] public string Name { get; set; }
+
+        public List<Device> Devices { get; set; } = new List<Device>();
     }
 }
